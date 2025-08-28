@@ -5,7 +5,7 @@ import plotly.graph_objects as go        # Für interaktive Diagramme
 
 # Konfiguration der Streamlit-Seite: Titel und Layout (z.B. breite Darstellung)
 st.set_page_config(page_title="Journal Metrics Dashboard", layout="wide")
-st.title("📊 Journal Metrics Dashboard")  # Überschrift der Seite
+st.title("Journal Metrics Dashboard")  # Überschrift der Seite
 
 # Daten laden mit Caching
 
@@ -13,7 +13,7 @@ st.title("📊 Journal Metrics Dashboard")  # Überschrift der Seite
 # damit sie beim erneuten Aufruf nicht erneut geladen wird.
 @st.cache_data
 def load_data():
-    return pd.read_excel("tandfonline_journals_seleniumAll.xlsx")
+    return pd.read_excel("tandfonline_journals_final.xlsx")
 
 # Lade die Daten in einen DataFrame
 df = load_data()
@@ -120,5 +120,5 @@ st.header("📈 Gesamtübersichten")
 
 # Erstellt Diagramme für drei verschiedene Metriken
 plot_overview("Impact Factor", "steelblue")
-plot_overview("CiteScore", "seagreen")
-plot_overview("Acceptance Rate", "indianred")
+plot_overview("CiteScore (Scopus)", "seagreen")
+plot_overview("acceptance rate", "indianred")
