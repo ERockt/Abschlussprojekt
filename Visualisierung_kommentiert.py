@@ -110,13 +110,13 @@ def plot_overview(metric_name, color):
             # Zeige das Diagramm in Streamlit an
             st.plotly_chart(fig, use_container_width=True)
         else:
-            st.info(f"ℹ️ Keine gültigen Daten für '{metric_name}'.")
+            st.info(f"Keine gültigen Daten für '{metric_name}'.")
     else:
-        st.info(f"ℹ️ Spalte '{metric_name}' nicht in den Daten vorhanden.")
+        st.info(f"Spalte '{metric_name}' nicht in den Daten vorhanden.")
 
 # Abschnitt: Gesamtübersicht
 
-st.header("📈 Gesamtübersichten")
+st.header("Gesamtübersichten")
 
 # Erstellt Diagramme für drei verschiedene Metriken
 plot_overview("Impact Factor", "steelblue")
